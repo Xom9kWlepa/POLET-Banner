@@ -746,7 +746,7 @@ body {
    .l3-paint {
       width: 16.72vw;
       top: -24vw;
-      left: 37vw
+      left: 34vw
    }
 
    .l1-paint {
@@ -797,6 +797,7 @@ body {
       height: auto;
       font-size: 21.5vw;
       padding-top: 6vw;
+      padding-bottom: 5vw;
       gap: 1vw;
    }  
 
