@@ -1,0 +1,88 @@
+@keyframes o{
+  0%       { opacity: 0; }
+  19.999%  { opacity: 0; }
+  20%      { opacity: 1; }
+  90%      { opacity: 1; }
+  90.001%  { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+@keyframes l{
+  0%   { opacity: 0; }
+  29.999%   { opacity: 0; }
+  30%  { opacity: 1; }
+  80%  { opacity: 1; }
+  80.001%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes e{
+  0%   { opacity: 0; }
+  39.999%   { opacity: 0; }
+  40%  { opacity: 1; }
+  70%  { opacity: 1; }
+  70.001%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@keyframes t{
+  0%   { opacity: 0; }
+  49.999%   { opacity: 0; }
+  50%  { opacity: 1; }
+  60%  { opacity: 1; }
+  60.001%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+@keyframes bottle {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes winomove {
+    from { transform: translateX(-20vw); }
+    to { transform: translateX(20vw); }
+}
+
+@keyframes arrowmove {
+    to { transform: translateX(30vw); }
+}
+
+@keyframes gradientrotate {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+}
+
+@keyframes wave {
+    to { transform: translateX(-80vw); }
+}
+
+@keyframes redrecup {
+    from { transform: translateY(22%); }
+    to { transform: translateY(-22%); }
+}
+
+@keyframes redrecdown {
+    from { transform: translateY(-22%); }
+    to { transform: translateY(22%); }
+}
+
+@keyframes leafrotate {
+    0% {transform: translateY(-80%) rotate(0deg);}
+    100% {transform: translateY(80%) rotate(250deg);}
+}
+
+@keyframes worldwine {
+    to { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+    @keyframes winomove {
+        from { transform: translateX(-40vw); }
+        to { transform: translateX(40vw); }
+    }
+    
+    @keyframes worldwine {
+        to { transform: translateX(-130%); }
+    }
+}

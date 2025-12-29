@@ -1,5 +1,817 @@
 @import "reset.css";
+@import "animations.css";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&display=swap');
 
-p {
-   font-family: "Inter";
+body {
+   background-color: rgba(254, 235, 215, 1);
+   display: flex;
+   flex-direction: column;
+   height: auto;
+   width: 100%;    
+   align-items: left;
+   overflow-x: hidden;
+   font-family: "JetBrains Mono";
+}
+
+.screen-1 {
+   display: flex;
+   flex-direction: row;
+   height: auto;
+}
+
+.screen-2 {
+   display: flex;
+   flex-direction: row;
+}
+
+.POLETS{
+   width: 50vw;
+   height: auto;
+   padding: 3vw;
+   display: flex;
+   flex-direction: column;
+   font-size: 14vw;
+}
+
+.POLET{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
+   font-weight: 800;
+   color: #8A181A;
+}
+
+.o, .l, .e, .t{
+  opacity: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.P1 {
+   .o, .l, .e, .t{
+      animation-duration: 2.5s;
+   }
+}
+
+.P2 {
+   .o, .l, .e, .t{
+      animation-duration: 1s;
+   }
+}
+
+.P3 {
+   .o, .l, .e, .t{
+      animation-duration: 3s;
+   }
+}
+
+.P4 {
+   .o, .l, .e, .t{
+      animation-duration: 2s;
+   }
+}
+
+.o{ animation-name: o; }
+.l{ animation-name: l; }
+.e{ animation-name: e; }
+.t{ animation-name: t; }
+
+.bottles {
+   width: 50vw;
+   height: 55vw;
+   padding-top: 2vw;
+   padding-bottom: 2vw;
+   padding-left: 2vw;
+   padding-right: 2vw;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+}
+
+.bottlegrid {
+   padding: 2vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.bottle {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+   opacity: 0;
+   animation: bottle steps(1, end) infinite;
+}
+
+.bottle-1 { 
+   padding-top: 8vw; 
+   padding-left: 3vw;
+   .bottle {  
+      animation-duration: 1s;
+   }
+}
+.bottle-2 { 
+   padding-top: 0vw; 
+   padding-right: 3vw; 
+   .bottle { 
+      transform: rotate(100deg); 
+      animation-duration: 0.5s;
+   }
+}
+.bottle-3 { 
+   padding-bottom: 2vw; 
+   padding-left: 2vw; 
+   .bottle { 
+      transform: rotate(200deg);
+      animation-duration: 0.8s;
+   }
+}
+.bottle-4 { 
+   padding-bottom: 8vw; 
+   padding-right: 4vw; 
+   .bottle { 
+      transform: rotate(268deg);
+      animation-duration: 0.3s;
+   }
+}
+
+.screen1-3 {
+   width: calc(100vw/3);
+   height: 26vw;
+
+}
+
+.scr1 {
+   background: linear-gradient(90deg, #266739, #214A25);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.scr1 img {
+   width: 61%;
+}
+
+.scr2-1 {
+   width: 100%;
+   height: 50%;
+   background: #731414;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: rgba(254, 235, 215, 1);
+   font-size: 14vw;
+   overflow: hidden;
+   text-align: center;
+}
+
+.scr2-1 p {
+   width: 100%;
+   height: 100%;
+   animation: winomove 1s linear infinite alternate;
+}
+
+.scr2-1 p:hover {
+   animation-play-state: paused;
+}
+
+.scr2-2 {
+   width: 100%;
+   height: 50%;
+   background: #266739;
+}
+
+.scr3-1 {
+   width: 100%;
+   height: 25%;
+   background: #204A25;
+}
+
+.scr3-2 {
+   width: 100%;
+   height: 75%;
+   background: #8A181A;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.scr3 img {
+   width: 100%;
+   animation: arrowmove 2s linear infinite alternate;
+}
+
+.scr3 img:hover {
+   animation-play-state: paused;
+}
+
+.screen-3 {
+   width: 100%;
+   height: 90vw;
+}
+
+.leaf {
+   position: relative;
+   opacity: 1;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.leaf:hover {
+  opacity: 0;
+}
+
+.l1 {
+   width: 36.66vw;
+   height: auto;
+   top: 2vw;
+   left: 8vw;
+   z-index: 2;
+}
+
+.l2 {
+   width: 12.58vw;
+   height: auto;
+   top: -19vw;
+   left: -10vw;
+   transform: rotate(50deg);
+   z-index: 2;
+}
+
+.l3 {
+   width: 27.72vw;
+   height: auto;
+   top: -20vw;
+   left: 67vw;
+   transform: rotate(203deg);
+   z-index: 2;
+}
+
+
+.l4 {
+   width: 41.68vw;
+   height: auto;
+   top: -36vw;
+   left: 27vw;
+   transform: rotate(311deg);
+   z-index: 2;
+}
+
+.l5 {
+   width: 22.39vw;
+   height: auto;
+   top: -26vw;
+   transform: rotate(160deg);
+   z-index: 2;
+}
+
+.l6 {
+   width: 16.72vw;
+   height: auto;
+   top: -50vw;
+   left: 7vw;
+   transform: rotate(27deg);
+   z-index: 2;
+}
+
+.l1-paint {
+   position: relative;
+   width: 23.72vw;
+   height: auto;
+   top: -7vw;
+   left: -24vw;
+   z-index: 1;
+}
+
+.l3-paint {
+   position: relative;
+   width: 16.72vw;
+   height: auto;
+   top: -39vw;
+   left: 73vw;
+   z-index: 1;
+   color: #8A181A;
+   font-size: 6vw;
+}
+
+.l4-paint {
+   position: relative;
+   width: 25.72vw;
+   height: auto;
+   top: -42vw;
+   left: -6vw;
+   z-index: 1;
+}
+
+.screen-4 {
+   width: 100%;
+   height: auto;
+}
+
+.lines {
+   display: flex;
+   flex-direction: row;
+   gap: 2.25vw;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.line {
+   background: #731414;
+   width: 0.6vw;
+   height: 22vw;
+   transform: rotate(31deg);
+}
+
+.screen-5 {
+   display: flex;
+   flex-direction: row;
+   width: 100vw;
+   height: 41vw;
+   align-items: flex-end;
+}
+
+.screen5-1 {
+   display: flex;
+   flex-direction: column;
+   width: 30vw;
+   height: 41vw;
+}
+
+.g2, .g4 {
+   background: linear-gradient(-90deg, #731414, #266739);
+}
+
+.g1, .g3, .g5 {
+   background: linear-gradient(90deg, #731414, #266739);
+}
+
+.gradient {
+   width: 100%;
+   height: 20%;
+   animation: gradientrotate 0.3s steps(1) infinite alternate;
+}
+
+.screen5-2 {
+   width: auto;
+   height: 41vw;
+}
+
+.bottlevert {
+   width: 11.77vw;
+   height: 100%;
+}
+
+.screen5-3 {
+   width: 58.23vw;
+   height: 41vw;
+   flex-direction: column;
+   display: flex;
+}
+
+.scr5-3 {
+   width: 100%;
+   height: 20%;
+   background: #266739;
+}
+
+.scr5-1 {
+   width: 100%;
+   height: 40%;
+   color: #204A32;
+   font-size: 10vw;
+   text-align: center;
+   font-weight: 700;
+}
+
+.scr5-2 {
+   width: 100%;
+   height: 60%;
+   overflow: hidden;
+}
+
+.wave {
+   width: auto;
+   height: 80%;
+   margin-top: 8%;
+   animation: wave 2s linear infinite alternate;
+}
+
+.wave:hover {
+   animation-play-state: paused;
+}
+
+.rectengs {
+   width: 100%;
+   height: 25vw;
+   flex-direction: row;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.redrec {
+   width: 6.25%;
+   height: 68%;
+   background: #731414;
+   overflow: hidden;
+}
+
+.up {
+   animation: redrecup 1s linear infinite alternate;
+}
+
+.down {
+   animation: redrecdown 1s linear infinite alternate;
+}
+
+.screen-7 {
+   display: flex;
+   flex-direction: row;
+   width: 100vw;
+   height: 31vw;
+}
+
+.scr7-1 {
+   width: 50%;
+   background: #204A32;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   color: #FEEBD7;
+   font-size: 9.5vw;
+   padding-top: 2vw;
+   p:hover {
+      color: #8A181A;
+   }
+}
+
+.scr7-2 {
+   width: 50%;
+   height: 100%;
+}
+
+.horizbottles {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1vw;
+  padding-left: 0.5vw;
+  padding-right: 1vw;
+}
+
+.bottlerow {
+  display: flex;
+  width: 100%;
+  gap: 0.5vw;
+  img {
+   width: 50%;
+  }
+  img:hover {
+   transform: rotate(180deg);
+  }
+}
+
+.screen-8 {
+   width: 100%;
+   height: 35vw;
+   padding-top: 1vw;
+   padding-bottom: 36vw;
+}
+
+.fallen {
+   width: 100%;
+   height: 35vw;
+   display: flex;
+   flex-direction: row;
+   overflow: hidden;
+}
+
+.f {
+   justify-content: center;
+   align-items: center;
+}
+
+.f img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.f1 {
+   height: 100%;
+   width: 15vw;
+}
+
+.f2 {
+   height: 100%;
+   width: 12vw;
+}
+
+.f3 {
+   height: 100%;
+   width: 13vw;
+}
+
+.f4 {
+   height: 100%;
+   width: 19vw;
+}
+
+.f5 {
+   height: 100%;
+   width: 11vw;
+}
+
+.f6 {
+   height: 100%;
+   width: 18vw;
+}
+
+.f7 {
+   height: 100%;
+   width: 12vw;
+}
+
+.leaf1 {
+   animation: leafrotate linear infinite;
+}
+
+.ll1 {
+   animation-duration: 2s;
+   transform: rotate(-30deg);
+}
+
+.ll2 {
+   animation-duration: 7s;
+   transform: rotate(60deg);
+}
+
+.ll3 {
+   animation-duration: 4s;
+   transform: rotate(-150deg);
+}
+
+.ll4 {
+   animation-duration: 3s;
+   transform: rotate(-90deg);
+}
+
+.ll5 {
+   animation-duration: 2.5s;
+   transform: rotate(120deg);
+}
+
+.ll6 {
+   animation-duration: 6s;
+   transform: rotate(-180deg);
+}
+
+.ll7 {
+   animation-duration: 5s;
+   transform: rotate(250deg);
+}
+
+.screen-9 {
+   width: 100%;
+   height: 10vw;
+   padding-bottom: 1vw;
+}
+
+.worldwine{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   gap: 10vw;
+   color: #8A181A;
+   font-size: 9vw;
+   white-space: nowrap;
+   animation: worldwine 3s linear alternate infinite;
+   padding-left: 2vw;
+}
+
+.winewine {
+   overflow: hidden;
+   padding-top: 1vw;
+}
+
+.screen-10 {
+   width: 100%;
+   background: #8A181A;
+   height: auto;
+   flex-direction: column;
+   display: flex;
+   color: #FEEBD7;
+   padding: 1vw;
+   font-size: 2vw;
+}
+
+.screen-10:hover {
+   background: #266739;
+}
+
+.scr10-1 {
+   width: 100%;
+   height: 50%;
+   text-align: right;
+}
+
+.scr10-2 {
+   width: 100%;
+   height: 50%;
+}
+
+@media (max-width: 600px) {
+   .screen-1 {
+      flex-direction: column;
+   }
+
+   .screen1-3 {
+      width: 100vw;
+      height: 70vw;
+   }
+
+   .bottles {
+      padding-top: 0;
+      padding-left: 5vw;
+      width: 100vw;
+      height: auto;
+   }
+   
+   .bottle {
+      width: 80%;
+   }
+
+   .POLETS {
+      width: 100vw;
+      font-size: 29vw;
+      padding: 5vw;
+      padding-bottom: 0;
+   }
+
+   .scr2 {
+      height: 35vw;
+   }
+
+   .scr3 {
+      height: 100%;
+   }
+
+   .bottle-1 { 
+      padding-top: 0vw; 
+      padding-left: 0vw;
+   }
+   .bottle-2 { 
+      padding-top: 0vw; 
+      padding-right: 0vw; 
+   }
+   .bottle-3 { 
+      padding-bottom: 0vw; 
+      padding-left: 0vw; 
+   }
+   .bottle-4 { 
+      padding-bottom: 0vw; 
+      padding-right: 0vw; 
+   }
+
+   .screen-2 {
+      flex-direction: column;
+   }
+
+   .scr2-2 {
+      display: none;
+   }
+
+   .scr3-1 {
+      display: none;
+   }
+
+   .scr2-1 {
+      height: 35vw;
+      font-size: 35vw;
+   }
+
+   .scr3 img {
+      width: 82%;
+      animation-duration: 1.5s;
+      padding-top: 2vw;
+      padding-bottom: 2vw;
+   }
+
+   .scr3-2 {
+      justify-content: end;
+   }
+
+   .l2 {
+      display: none;
+   }
+
+   .l5 {
+      display: none;
+   }
+
+   .l6 {
+      display: none;
+   }
+
+   .l3 {
+      width: 30.72vw;
+      top: -3vw;
+      left: -39vw
+   }
+
+   .l1 {
+      width: 36.66vw;
+      top: 34vw;
+      left: 3vw;
+   }
+
+   .l4 {
+      width: 53.68vw;
+      top: -15vw;
+      left: 42vw;
+   }
+
+   .l3-paint {
+      width: 16.72vw;
+      top: -24vw;
+      left: 37vw
+   }
+
+   .l1-paint {
+      width: 23.72vw;
+      top: 28vw;
+      left: -31vw
+   }
+
+   .l4-paint {
+      width: 31.72vw;
+      top: -24vw;
+      left: -2vw
+   }
+
+   .screen-5 {
+      flex-direction: column;
+      height: auto;
+   }
+
+   .screen5-2 {
+      display: none;
+   }
+
+   .screen5-1 {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 80vw;
+   }
+
+   .screen5-3 {
+      width: 100vw;
+      height: 80vw;
+   }
+
+   .scr5-1 {
+      font-size: 19vw;
+      padding-top: 4vw;
+   }
+
+   .screen-7 {
+      flex-direction: column;
+      height: auto;
+   }
+   
+   .scr7-1 {
+      width: 100%;
+      height: auto;
+      font-size: 21.5vw;
+      padding-top: 6vw;
+      gap: 1vw;
+   }  
+
+   .scr7-2 {
+      width: 100%;
+      height: auto;
+      padding-top: 1vw;
+   }
+
+   .screen-9 {
+      width: 100%;
+      height: auto;
+   }
+
+   .worldwine {
+      font-size: 14vw;
+   }
+
+   .screen-10 {
+      font-size: 6vw;
+   }
 }
